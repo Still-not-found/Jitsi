@@ -108,7 +108,7 @@ SSL Prompt
 ### 8. Install Let's Encrypt SSL Certificate
 Use the following script to request a Let's Encrypt SSL certificate.
 
-$ sudo /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
+    $ sudo /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
 The script prompts for your email address. Enter your address and press ENTER.
 
 Enter your email and press [ENTER]: admin@example.com
@@ -128,15 +128,18 @@ This work-around will correct the error.
 
 Install the certbot package from the Ubuntu 20.04 repository.
 
-$ sudo apt install certbot
+    $ sudo apt install certbot
 Update install-letsencrypt-cert.sh to use certbot instead of certbot-auto.
 
-$ sudo sed -i 's/\.\/certbot-auto/certbot/g' /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
+    $ sudo sed -i 's/\.\/certbot-auto/certbot/g' /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
 The Jitsi script expects certbot in /usr/sbin, and Ubuntu installs it in /usr/bin. Make a symbolic link for the script.
 
-$ sudo ln -s /usr/bin/certbot /usr/sbin/certbot 
+    $ sudo ln -s /usr/bin/certbot /usr/sbin/certbot 
 Run the script again.
 
-$ sudo /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
-9. Start a Meeting
+    $ sudo /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
+    
+   #### congradulations you have successfully completed your installation and now you can 
+   
+### 9. Start a Meeting
 Navigate to https://jitsi.example.com in your favorite web browser to access your Jitsi Meet Video conferencing service.
