@@ -64,10 +64,10 @@ For security and performance, follow Vultr's best practices guide to update Ubun
 ### 5. Install OpenJDK Java Runtime Environment (JRE) 8
 Jitsi requires the Java Runtime Environment. Install OpenJDK JRE 8.
 
-$ sudo apt install -y openjdk-8-jre-headless
+    $ sudo apt install -y openjdk-8-jre-headless
 Verify OpenJDK is installed properly.
 
-$ java -version
+    $ java -version
 
 openjdk version "1.8.0_252"
 
@@ -87,16 +87,16 @@ Jitsi works best with Nginx and will automatically configure Nginx settings if w
     $ sudo systemctl start nginx.service
 
     $ sudo systemctl enable nginx.service
-7. Install Jitsi
+### 7. Install Jitsi
 Install Jitsi from the official Jitsi repository.
 
-$ wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
+    $ wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
 
-$ echo "deb https://download.jitsi.org stable/"  | sudo tee -a /etc/apt/sources.list.d/jitsi-stable.list
+    $ echo "deb https://download.jitsi.org stable/"  | sudo tee -a /etc/apt/sources.list.d/jitsi-stable.list
 
-$ sudo apt update
+    $ sudo apt update
 
-$ sudo apt install -y jitsi-meet
+    $ sudo apt install -y jitsi-meet
 The installer will request your FQDN. Enter the fully-qualified domain name of your server.
 
 Jitsi Hostname Example
@@ -105,7 +105,7 @@ When asked to configure SSL, select Generate a new self-signed certificate.
 
 SSL Prompt
 
-8. Install Let's Encrypt SSL Certificate
+### 8. Install Let's Encrypt SSL Certificate
 Use the following script to request a Let's Encrypt SSL certificate.
 
 $ sudo /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
