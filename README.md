@@ -45,15 +45,15 @@ For a machine with 2 GB of memory, a 2 GB (2048 MB) swap partition is recommende
 ### 3. Configure Firewall Rules for Jitsi Meet
 Jitsi requires OpenSSH, HTTP, and HTTPS traffic, along with inbound UDP traffic on port 10000 through port 20000.
 
-   $ sudo ufw allow OpenSSH
+    $ sudo ufw allow OpenSSH
 
-   $ sudo ufw allow http
+    $ sudo ufw allow http
 
-   $ sudo ufw allow https
+    $ sudo ufw allow https
 
-   $ sudo ufw allow in 10000:20000/udp
+    $ sudo ufw allow in 10000:20000/udp
 
-   $ sudo ufw enable
+    $ sudo ufw enable
 
 Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
 When prompted to proceed, type Y and then ENTER.
@@ -76,17 +76,17 @@ OpenJDK Runtime Environment (build 1.8.0_252-8u252-b09-1ubuntu1-b09)
 OpenJDK 64-Bit Server VM (build 25.252-b09, mixed mode)
 Set the JAVA_HOME environment variable.
 
-$ echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")" | sudo tee -a /etc/profile
+    $ echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")" | sudo tee -a /etc/profile
 
-$ source /etc/profile
+    $ source /etc/profile
 ### 6. Install the Nginx Web Server
 Jitsi works best with Nginx and will automatically configure Nginx settings if we install it first.
 
-$ sudo apt install -y nginx
+    $ sudo apt install -y nginx
 
-$ sudo systemctl start nginx.service
+    $ sudo systemctl start nginx.service
 
-$ sudo systemctl enable nginx.service
+    $ sudo systemctl enable nginx.service
 7. Install Jitsi
 Install Jitsi from the official Jitsi repository.
 
