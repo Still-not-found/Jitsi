@@ -10,11 +10,11 @@ Jitsi Meet is a free and open-source video conferencing service solution packed 
          To install your server manually, follow the steps below.
 
 ## Prerequisites
-* A fresh Ubuntu 20.04 LTS x64 server instance. For best results, we recommend a High Frequency Compute instance with at least 2 GB of memory.
+  * A fresh Ubuntu 20.04 LTS x64 server instance. For best results, we recommend a High Frequency Compute instance with at least 2 GB of memory.
 
-* A non-root sudo user.create a sudo user on Ubuntu.
+  * A non-root sudo user.create a sudo user on Ubuntu.
 
-* A Fully Qualified Domain Name (FQDN) assigned to your server's IP address.
+  * A Fully Qualified Domain Name (FQDN) assigned to your server's IP address.
 
 ## Examples
 This tutorial uses examples:
@@ -28,40 +28,40 @@ This tutorial uses examples:
 ### 1. Create a Swap Partition
 For a machine with 2 GB of memory, a 2 GB (2048 MB) swap partition is recommended to improve system performance. Choose a swap partition size appropriate for your instance.
 
-$ sudo dd if=/dev/zero of=/swapfile count=2048 bs=1M
+    $ sudo dd if=/dev/zero of=/swapfile count=2048 bs=1M
 
-$ sudo chmod 600 /swapfile
+    $ sudo chmod 600 /swapfile
 
-$ sudo mkswap /swapfile
+    $ sudo mkswap /swapfile
 
-$ sudo swapon /swapfile
+    $ sudo swapon /swapfile
 
-$ echo '/swapfile   none    swap    sw    0   0' | sudo tee -a /etc/fstab
+    $ echo '/swapfile   none    swap    sw    0   0' | sudo tee -a /etc/fstab
 
-$ free -m
-2. Set the Hostname and FQDN
-You must set the hostname and FQDN before you deploy the Let's Encrypt HTTPS certificate for security. Use the Vultr's Best Practice Guide to configure your server hostname and FQDN. This guide uses the example names jitsi, and jitsi.example.com.
+    $ free -m
+### 2. Set the Hostname and FQDN
+   You must set the hostname and FQDN before you deploy the Let's Encrypt HTTPS certificate for security. Use the Vultr's Best Practice Guide to configure your server hostname and FQDN. This guide uses the example names jitsi, and jitsi.example.com.
 
-3. Configure Firewall Rules for Jitsi Meet
+### 3. Configure Firewall Rules for Jitsi Meet
 Jitsi requires OpenSSH, HTTP, and HTTPS traffic, along with inbound UDP traffic on port 10000 through port 20000.
 
-$ sudo ufw allow OpenSSH
+   $ sudo ufw allow OpenSSH
 
-$ sudo ufw allow http
+   $ sudo ufw allow http
 
-$ sudo ufw allow https
+   $ sudo ufw allow https
 
-$ sudo ufw allow in 10000:20000/udp
+   $ sudo ufw allow in 10000:20000/udp
 
-$ sudo ufw enable
+   $ sudo ufw enable
 
 Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
 When prompted to proceed, type Y and then ENTER.
 
-4. Update the system
+### 4. Update the system
 For security and performance, follow Vultr's best practices guide to update Ubuntu.
 
-5. Install OpenJDK Java Runtime Environment (JRE) 8
+### 5. Install OpenJDK Java Runtime Environment (JRE) 8
 Jitsi requires the Java Runtime Environment. Install OpenJDK JRE 8.
 
 $ sudo apt install -y openjdk-8-jre-headless
@@ -79,7 +79,7 @@ Set the JAVA_HOME environment variable.
 $ echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")" | sudo tee -a /etc/profile
 
 $ source /etc/profile
-6. Install the Nginx Web Server
+### 6. Install the Nginx Web Server
 Jitsi works best with Nginx and will automatically configure Nginx settings if we install it first.
 
 $ sudo apt install -y nginx
