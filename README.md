@@ -1,13 +1,9 @@
 # Install Jitsi Meet on Ubuntu 20.04 LTS
 Author: Still-not-found
 
-Last Updated: Wednesday, May 29, 2023 
+Last Updated: Wednesday, April 1, 2023 
 
 Jitsi Meet is a free and open-source video conferencing service solution packed with various premium features, such as superior sound quality, high-grade encryption and privacy, and universal multi-platform availability. With the help of Jitsi Meet, you can easily set up a stunning video conferencing service of your own.
-
-## Manual Installation
-
-         To install your server manually, follow the steps below.
 
 ## Prerequisites
   * A fresh Ubuntu 20.04 LTS x64 server instance. For best results, we recommend a High Frequency Compute instance with at least 2 GB of memory.
@@ -26,6 +22,7 @@ This tutorial uses examples:
    * IP address 192.168.2.36
 
 ### 1. Create a Swap Partition
+
 For a machine with 2 GB of memory, a 2 GB (2048 MB) swap partition is recommended to improve system performance. Choose a swap partition size appropriate for your instance.
 
     $ sudo dd if=/dev/zero of=/swapfile count=2048 bs=1M
@@ -39,6 +36,7 @@ For a machine with 2 GB of memory, a 2 GB (2048 MB) swap partition is recommende
     $ echo '/swapfile   none    swap    sw    0   0' | sudo tee -a /etc/fstab
 
     $ free -m
+    
 ### 2. Set the Hostname and FQDN
    You must set the hostname and FQDN before you deploy the Let's Encrypt HTTPS certificate for security. Use the Vultr's Best Practice Guide to configure your server hostname and FQDN. This guide uses the example names jitsi, and jitsi.example.com.
 
@@ -79,6 +77,7 @@ Set the JAVA_HOME environment variable.
     $ echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")" | sudo tee -a /etc/profile
 
     $ source /etc/profile
+    
 ### 6. Install the Nginx Web Server
 Jitsi works best with Nginx and will automatically configure Nginx settings if we install it first.
 
@@ -87,6 +86,7 @@ Jitsi works best with Nginx and will automatically configure Nginx settings if w
     $ sudo systemctl start nginx.service
 
     $ sudo systemctl enable nginx.service
+    
 ### 7. Install Jitsi
 Install Jitsi from the official Jitsi repository.
 
@@ -118,10 +118,7 @@ You will probably see the following error, because Ubuntu 20.04 has removed the 
 Package python-virtualenv is not available, but is referred to by another package.
 
 This may mean that the package is missing, has been obsoleted, or
-
 is only available from another source
-
-
 
 E: Package 'python-virtualenv' has no installation candidate
 This work-around will correct the error.
