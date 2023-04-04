@@ -1,7 +1,7 @@
 # Install Jitsi Meet on Ubuntu 20.04 LTS
 Author: Still-not-found
 
-Last Updated: Wednesday, April 1, 2023 
+Last Updated: Wednesday, April 4, 2023 
 
 Jitsi Meet is a free and open-source video conferencing service solution packed with various premium features, such as superior sound quality, high-grade encryption and privacy, and universal multi-platform availability. With the help of Jitsi Meet, you can easily set up a stunning video conferencing service of your own.
 
