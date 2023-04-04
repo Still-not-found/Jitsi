@@ -140,3 +140,5 @@ Run the script again.
    
 ### 9. Start a Meeting
 Navigate to https://jitsi.example.com in your favorite web browser to access your Jitsi Meet Video conferencing service.
+
+Note: here "jitsi.example.com" is a dummy domain instead of this you should use your own domain.
