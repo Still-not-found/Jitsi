@@ -1,4 +1,4 @@
-# Install Jitsi Meet on Ubuntu 20.04 LTS
+# Install Jitsi Meet on Ubuntu 20.04 & 22.04 LTS
 Author: Still-not-found
 
 Last Updated: Wednesday, April 4, 2023 
