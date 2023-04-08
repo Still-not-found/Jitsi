@@ -2,7 +2,7 @@
 This is just an Installation guide of jitsi-meet for self hosting in Ubuntu/debian.
 
 Author: Still-not-found
-Last Updated: Wednesday, April 6, 2023 
+Last Updated: Wednesday, April 8, 2023 
 
 Jitsi Meet is a free and open-source video conferencing service solution packed with various premium features, such as superior sound quality, high-grade encryption and privacy, and universal multi-platform availability. With the help of Jitsi Meet, you can easily set up a stunning video conferencing service of your own.
 
