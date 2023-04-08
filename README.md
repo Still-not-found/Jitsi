@@ -1,4 +1,4 @@
-# Install Jitsi Meet on Ubuntu 20.04 & 22.04 LTS
+# Install Jitsi Meet on Ubuntu 20.04 & 22.04 LTS or debian
 This is just an Installation guide of jitsi-meet for self hosting in Ubuntu/debian.
 
 Author: Still-not-found
